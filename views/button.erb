@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="Borisbutton" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+</head>
+<body>
+
+<p>This is my button. It is tested</p>
+
+<button onclick="myFunction()">click me</button>
+
+<div id="myDIV">
+<p>Ta-da</p>
+</div>
+
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
+
