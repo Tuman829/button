@@ -31,3 +31,23 @@ jobs:
       - store_artifacts:
           path: /tmp/test-results
           destination: test-results
+  deploy:
+    - image: circleci/ruby:2.4.1-node-browsers
+  steps:
+      - checkout
+      - run:
+          name: Deploy Master to Heroku
+          command: |
+            git push https://heroku:$6b2490ff-4a88-4151-8b3c-792caf3e8a1d@git.heroku.com/dream-deep-button.git master
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master    
