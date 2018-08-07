@@ -19,7 +19,7 @@ jobs:
     steps:
       - checkout
       - run: sudo gem install sinatra
-      - run: sudo gem install rake-test   
+      - run: sudo gem install rack-test   
      # run tests!
       - run: test/test.rb
 
