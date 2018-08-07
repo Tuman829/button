@@ -19,8 +19,12 @@ jobs:
     steps:
       - checkout
       - run: sudo gem install sinatra
-      - run: sudo gem install rack-test   
+      - run: sudo gem install rack-test
+      - run: sudo gem install capybara
+      - run: sudo gem install chromedriver-helper 
+      - run: sudo gem install selenium-webdriver
      # run tests!
+      - xvfb-run -a bundle exec rspec
       - run: sudo ruby test/test.rb
 
       # collect reports
