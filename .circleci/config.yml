@@ -21,7 +21,7 @@ jobs:
       - run: sudo gem install sinatra
       - run: sudo gem install rack-test   
      # run tests!
-      - run: sudo test/test.rb
+      - run: sudo ruby test/test.rb
 
       # collect reports
       - store_test_results:
