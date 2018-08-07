@@ -38,7 +38,7 @@ jobs:
       - run:
           name: Deploy Master to Heroku
           command: |
-            git push https://heroku:$6b2490ff-4a88-4151-8b3c-792caf3e8a1d@git.heroku.com/dream-deep-button.git master
+            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/dream-deep-button.git master
 
 workflows:
   version: 2
